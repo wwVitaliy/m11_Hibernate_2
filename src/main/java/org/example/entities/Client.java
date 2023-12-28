@@ -7,11 +7,14 @@ import lombok.Data;
 @Entity
 @Table(name = "Client")
 public class Client {
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private long id;
-    @Column(name = "name", length =  200)
-    private String name;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+
+    private Long id;
+    @Column(name = "name", length = 200)
+    private String name;
 }
+
+
