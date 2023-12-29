@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "Ticket")
 public class Ticket {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 

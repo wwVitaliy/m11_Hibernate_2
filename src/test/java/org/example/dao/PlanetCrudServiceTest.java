@@ -1,4 +1,4 @@
-package org.example.entities.dao;
+package org.example.dao;
 
 import org.example.dao.PlanetCrudService;
 import org.example.entities.Planet;

@@ -15,7 +15,7 @@ CREATE TABLE Planet (
 CREATE TABLE Ticket (
     id SERIAL PRIMARY KEY,
     created_at TIMESTAMP DEFAULT (now() AT TIME ZONE 'UTC'),
-    client_id bigint REFERENCES Client(id),
+    client_id bigint NOT NULL REFERENCES Client(id),
     from_planet_id VARCHAR REFERENCES Planet(id),
-    to_planet_id VARCHAR REFERENCES Planet(id)
+    to_planet_id VARCHAR NOT NULL REFERENCES Planet(id)
 );

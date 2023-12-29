@@ -41,6 +41,9 @@ public class PlanetCrudService {
         try (Session session
                      = HibernateUtils.getInstance().getSessionFactory().openSession()) {
             return session.get(Planet.class, id);
+        }catch (Exception e) {
+            System.out.println("Cannot find planet. Reason: " + e.getMessage());
+            return null;
         }
     }
 
