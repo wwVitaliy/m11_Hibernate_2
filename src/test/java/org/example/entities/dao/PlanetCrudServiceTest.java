@@ -1,5 +1,6 @@
 package org.example.entities.dao;
 
+import org.example.dao.PlanetCrudService;
 import org.example.entities.Planet;
 import org.example.postgresdb.PostgresDBInitService;
 import org.junit.jupiter.api.BeforeAll;

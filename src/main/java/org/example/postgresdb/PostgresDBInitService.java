@@ -7,19 +7,10 @@ import org.flywaydb.core.Flyway;
  */
 public class PostgresDBInitService {
     public PostgresDBInitService() {
-        PostgresDBInitService.applyFlywayMigrations(
+       new FlywayMigration(
                 PropertyReader.getDBURL(),
                 PropertyReader.getDBUser(),
                 PropertyReader.getDBPassword()
         );
     }
-
-    /**
-     * Applies Flyway migrations for DB
-     */
-    private static void applyFlywayMigrations(String url, String user, String password) {
-        Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
-        flyway.migrate();
-    }
-
 }

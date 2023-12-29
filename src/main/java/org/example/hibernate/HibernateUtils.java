@@ -16,9 +16,6 @@ public class HibernateUtils {
     private SessionFactory sessionFactory;
 
     private HibernateUtils() {
-        //initialize db
-        new PostgresDBInitService();
-
         //configure hibernate
         sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
